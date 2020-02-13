@@ -1,0 +1,36 @@
+{% extends "dashboarddesign.html" %}
+{% block content %}
+
+
+    <div class="container" >
+				<div class="modal-body" style="margin-top: 50px;">
+<div class="card card-body">
+<table class="table">
+<tr>
+	<th>ID</th>
+	<th>ADMINNAME</th>
+	<th>EMAIL</th>
+	<th>PASSWORD</th>
+	<th>ACTION</th>
+	</tr>
+{% for admin in ausers %}
+<tr>
+	<td>{{admin.admin_id}}</td>
+	<td>{{admin.name}}</td>
+	<td>{{admin.email}}</td>
+	<td>{{admin.password}}</td>
+	<td><a href="/admindashboard/{{admin.admin_id}}">edit</a>|<a href="/adelete/{{admin.admin_id}}">delete</a></td>
+</tr>
+
+{% endfor %}
+
+
+
+</table>
+</div>
+                </div>
+    </div>
+{% endblock content %}
+
+
+

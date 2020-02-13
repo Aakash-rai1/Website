@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway:700,900" rel="stylesheet">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href={% static "css/bootstrap.min.css" %} />
+
+
+
+
+
+  <!-- Font Awesome Icon -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <!-- Custom stylesheet -->
+  <link type="text/css" rel="stylesheet" href="{%static 'css/dashboard.css'%}" />
+
+
+  <link rel="shortcut icon" href="{%  static 'images/logo - Shortcut.lnk' %}" />
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+</head>
+
+<body>
+<div class="header">
+    <a class="pull-left" href="#"><img src="{% static 'images/logo.png' %}" alt="logo" style="width:42px; height: 42px; "></a>
+    <a style="text-align: center; font-size: 27px; padding-left: 50px; font-family: Jokerman; color: black;">Admin Panel</a>
+<a href="#" class="nav-trigger"><span></span>
+</a>
+
+</div>
+<div class="side-nav">
+    <nav>
+        <ul>
+            <li>
+                <a href="/userdashboard">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="/admins">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Admins</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="adsignup">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Signup</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+{% block content %}
+{% endblock %}
+{#<div class="main-content">#}
+{#dashboard dash dash dash dash dash#}
+{##}
+{##}
+{#</div>#}
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>

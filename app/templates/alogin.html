@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+<div class="modal-body">
+<form action="/aloginpage" method="post" style="border:1px solid #ccc">
+  {% csrf_token %}
+    <h1>Admin Login</h1>
+    <hr>
+
+   
+    <label for="email"><b>Adminname</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+
+
+    <button type="submit">Admin Login</button>
+<button type="button" class="cancelbtn"><a href="index">Cancel</a></button>
+    <span class="psw">Haven't registered yet? <a href="adsignup">Sign up</a></span>
+    {% for message in messages%}
+    {{ message}}
+    {% endfor %}
+  
+</form>
+				</div>
+</div>
+{% endblock %}
